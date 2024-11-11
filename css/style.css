@@ -13,7 +13,6 @@
   align-items: center;
   flex-direction: row;
   overflow: hidden;
-  border: 1px solid red;
 }
 @media screen and (max-width: 960px) {
   .container {
@@ -92,6 +91,32 @@
 
 .hidden {
   overflow: hidden;
+}
+
+.hero {
+  height: 90vh;
+}
+@media screen and (max-width: 960px) {
+  .hero {
+    height: auto;
+  }
+}
+
+.bg-home {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.svg-bg-home {
+  width: 150%;
+}
+@media screen and (min-width: 1440px) {
+  .svg-bg-home {
+    width: 100%;
+  }
 }
 
 h1 {
@@ -864,6 +889,7 @@ header {
 
 .active-header {
   background-color: #f7f2fa;
+  height: 10vh;
   box-shadow: 0px 51px 80px rgba(169, 80, 196, 0.08), 0px 15.375px 24.1177px rgba(169, 80, 196, 0.0521271), 0px 6.38599px 10.0172px rgba(169, 80, 196, 0.04), 0px 2.30969px 3.62304px rgba(169, 80, 196, 0.0278729);
 }
 
@@ -1077,6 +1103,17 @@ header {
   display: flex;
   flex-direction: column;
 }
+.nav-list-mobile svg {
+  width: 36px;
+  height: 36px;
+}
+.nav-list-mobile svg path {
+  stroke: #a6a6a7;
+  transition: 0.7s ease;
+}
+.nav-list-mobile svg:hover path {
+  stroke: #82269e;
+}
 
 .nav-link-mobile {
   display: inline-block;
@@ -1102,4 +1139,125 @@ header {
 }
 .nav-link-mobile:hover::after {
   width: 100%;
+}
+
+.dropshadow {
+  filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+
+.div-card {
+  perspective: 500px;
+  position: relative;
+}
+
+.card {
+  width: 340px;
+  height: 217.6px;
+  border-radius: 12px;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  background-color: red;
+  animation: flip-card 12s linear infinite alternate, change-bg-card 12s linear infinite alternate;
+  z-index: -1;
+}
+
+@keyframes flip-card {
+  0% {
+    transform: rotateX(-10deg) rotateY(10deg) rotateY(-15deg);
+  }
+  40% {
+    transform: rotateX(0deg) rotateY(20deg);
+  }
+  60% {
+    transform: rotateX(180deg) rotateY(20deg);
+  }
+  100% {
+    transform: rotateX(190deg) rotateY(10deg) rotateY(15deg);
+  }
+}
+@keyframes change-bg-card {
+  0%, 49% {
+    background-image: url(../../svg/nubank.svg);
+    background-size: cover;
+  }
+  50%, 100% {
+    background-image: url(../../svg/nubank-verse.svg);
+    background-size: cover;
+  }
+}
+.icon-card-hero {
+  position: absolute;
+  top: 0px;
+  left: -30px;
+  z-index: 200;
+  animation: icons-hero 7s ease 0.5s infinite alternate;
+}
+
+.icon-contactless-hero {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+  z-index: 200;
+  animation: icons-hero 7s ease 1s infinite alternate;
+}
+@media screen and (max-width: 960px) {
+  .icon-contactless-hero {
+    top: 320px;
+    left: 120px;
+  }
+}
+
+.icon-mobile-hero {
+  position: absolute;
+  top: 150px;
+  left: -250px;
+  z-index: 200;
+  animation: icons-hero 7s ease 2.5s infinite alternate;
+}
+@media screen and (max-width: 960px) {
+  .icon-mobile-hero {
+    top: 350px;
+    left: -100px;
+  }
+}
+
+@keyframes icons-hero {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(10px, -40px, 0);
+  }
+}
+.bg-home-blur1 {
+  transform: translate3d(0, -100px, 0);
+}
+
+.bg-home-blur2 {
+  transform: translate3d(0, -150px, 0);
+}
+
+.bg-home-rect1 {
+  animation: bg-home-rect 3s ease 0s infinite alternate;
+}
+
+.bg-home-rect2 {
+  animation: bg-home-rect 3s ease 0.5s infinite alternate;
+}
+
+.bg-home-rect3 {
+  animation: bg-home-rect 3s ease 1s infinite alternate;
+}
+
+.bg-home-rect4 {
+  animation: bg-home-rect 3s ease 1.5s infinite alternate;
+}
+
+@keyframes bg-home-rect {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 30px, 0);
+  }
 }/*# sourceMappingURL=style.css.map */
