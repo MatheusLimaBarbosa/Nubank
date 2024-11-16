@@ -25,6 +25,12 @@
   }
 }
 
+.flex-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .flex-start {
   display: flex;
   justify-content: flex-start;
@@ -34,6 +40,12 @@
 .flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.flex-spacebetween {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -207,10 +219,6 @@
 }
 .list a {
   color: #bb71d2;
-}
-
-footer {
-  background: linear-gradient(220.94deg, #a950c4 14.43%, #82269e 85.28%);
 }
 
 h1 {
@@ -1458,6 +1466,19 @@ header {
 }
 .icon:hover {
   transform: scale(1.05);
+}
+
+.icon-networks {
+  max-width: 48px;
+  padding: 8px;
+}
+
+footer {
+  background: linear-gradient(220.94deg, #a950c4 14.43%, #82269e 85.28%);
+}
+
+.bt-purple {
+  border-top: 1px solid #bb71d2;
 }
 
 .div-card {

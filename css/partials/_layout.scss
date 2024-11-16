@@ -52,6 +52,12 @@ $container-s: 540px;
     }
 }
 
+.flex-top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .flex-start {
     display: flex;
     justify-content: flex-start;
@@ -61,6 +67,12 @@ $container-s: 540px;
 .flex-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.flex-spacebetween {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -237,6 +249,3 @@ $container-s: 540px;
     }
 }
 
-footer {
-    background: linear-gradient(220.94deg, $secondary-normal 14.43%, $primary-normal 85.28%);
-}
