@@ -206,3 +206,37 @@ $container-s: 540px;
         align-items: center;
     }
 }
+
+.bg-invite {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.svg-invite {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    @include responsive(l) {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.list {
+    list-style: none;
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    a {
+        color: $secondary-light;
+    }
+}
+
+footer {
+    background: linear-gradient(220.94deg, $secondary-normal 14.43%, $primary-normal 85.28%);
+}
